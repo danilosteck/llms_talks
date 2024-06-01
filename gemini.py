@@ -1,5 +1,6 @@
 # Ref: https://ai.google.dev/gemini-api/docs/get-started/tutorial?lang=python&hl=pt-br
-
+# OBS: not WORKING
+"""
 import pathlib
 import textwrap
 
@@ -46,3 +47,4 @@ if __name__ == "__main__":
     prompt = "Escreva um poema sobre a natureza."
     texto_gerado = gerar_texto_gemini(prompt)
     print(texto_gerado)
+"""

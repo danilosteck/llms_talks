@@ -1,5 +1,16 @@
 import json
 import os
+import logging
+
+def get_logger(file, log_filename):
+    logging.basicConfig(format='%(asctime)s;%(name)s;%(levelname)s;%(message)s',
+                        level=logging.INFO,
+                        encoding='UTF-8',
+                        handlers=[
+                            logging.FileHandler(log_filename),
+                            logging.StreamHandler()
+                        ])
+    return logging.getLogger(os.path.basename(file))
 
 # Função para ler um arquivo JSON e retornar como string
 def ler_json_como_string(caminho_arquivo):
